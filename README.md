@@ -30,4 +30,4 @@ Railway detecta `Dockerfile` en la raíz del repositorio. Usa `market-dealerly` 
 
 Perfiles, sesión, anuncios, estado documental, leads, visitas, favoritos y borradores se guardan en `localStorage`. Fotos y documentos seleccionados se guardan como blobs en IndexedDB. No se guardan contraseñas ni se contacta a personas. La verificación y moderación son simuladas.
 
-El plan de producto exclusivo está en `../docs/marketplace-plan.md`.
+El plan de producto exclusivo está en `docs/marketplace-plan.md`.
