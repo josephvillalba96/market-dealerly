@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1d1650" />
+  <meta name="description" content="Dealerly Market presenta Vitrina Caribe, un marketplace regional de carros y motos." />
+  <title>Dealerly Market | Marketplace Vitrina Caribe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=legal-pages-8" />
+  <script src="app.js?v=legal-pages-8" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-main wrap">
+      <a class="brand" href="#resultados" aria-label="Dealerly Market · Vitrina Caribe"><span><b>Dealerly</b><small>MARKET</small></span></a>
+      <a class="auth-return" href="#resultados">← Explorar vehículos</a><form id="search-form" class="search-box" role="search"><label class="sr-only" for="search-input">Buscar vehículos</label><input id="search-input" placeholder="Busca marca, modelo o ciudad" autocomplete="off" /><select id="search-kind" aria-label="Tipo"><option value="all">Todo</option><option value="Carro">Carros</option><option value="Moto">Motos</option></select><button aria-label="Buscar">⌕</button></form>
+      <div class="header-actions"><button class="button header-login" data-route="cuenta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.4-3.4 2.9-5.5 6.5-5.5s6.1 2.1 6.5 5.5"/></svg>Ingresar</button><button class="button button-primary header-signup" data-route="registro">Crear cuenta</button></div>
+    </div>
+    <div class="header-sub"><div class="wrap nav-row"><nav aria-label="Navegación principal"><a href="#resultados" data-nav="resultados">Explorar</a><a href="#resultados?kind=Carro">Carros</a><a href="#resultados?kind=Moto">Motos</a><a href="#publicar">Publicar vehículo</a></nav><span class="trust-note">✦ Información clara, decisiones tranquilas</span></div></div>
+  </header>
+  <main id="app-view" class="wrap app-view" tabindex="-1"></main>
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="#resultados"><span><b>Dealerly</b><small>MARKET</small></span></a><span>Vitrina Caribe · Demo independiente · datos ficticios · Barranquilla</span><nav class="footer-legal" aria-label="Información legal"><a href="#privacidad">Privacidad</a><a href="#terminos">Términos</a></nav><button class="link-button" id="reset-demo">Reiniciar demo</button></div></footer>
+  <dialog id="filters-modal" class="filters-modal" aria-labelledby="filters-title"><div class="filters-shell"><header class="filters-header"><div><p class="eyebrow">Encuentra más rápido</p><h2 id="filters-title">Filtrar vehículos</h2><p>Combina criterios y explora los resultados.</p></div><button class="drawer-close" type="button" data-action="close-filters" aria-label="Cerrar filtros">×</button></header><div class="filters-body"><label class="form-field">Ciudad<select id="filter-city"><option value="all">Toda la zona</option><option>Barranquilla</option><option>Puerto Colombia</option><option>Soledad</option><option>Cartagena</option></select></label><label class="form-field">Vendedor<select id="filter-seller"><option value="all">Todos</option><option>Concesionario</option><option>Particular</option></select></label><fieldset class="filter-price"><legend>Presupuesto · COP</legend><div class="price-range"><label><span>Desde</span><input id="filter-min" type="number" min="0" placeholder="$ 0"></label><label><span>Hasta</span><input id="filter-max" type="number" min="0" placeholder="Sin límite"></label></div></fieldset><label class="form-field">Año desde<select id="filter-year"><option value="0">Cualquier año</option><option value="2024">2024</option><option value="2022">2022</option><option value="2020">2020</option><option value="2018">2018</option></select></label><label class="form-field">Ordenar resultados<select id="sort-filter"><option value="relevance">Más relevantes</option><option value="price-asc">Menor precio</option><option value="price-desc">Mayor precio</option><option value="year">Más recientes</option></select></label><div class="drawer-tip"><b>Compra con más contexto</b><span>Compara lo declarado por cada vendedor y los datos de inspección disponibles.</span></div></div><footer class="filters-footer"><button type="button" class="button button-light" data-action="clear-filters">Limpiar filtros</button><button type="button" class="button button-primary" data-action="apply-filters">Aplicar filtros</button></footer></div></dialog>
+  <dialog id="modal" class="modal"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
