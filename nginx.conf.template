@@ -1,0 +1,17 @@
+server {
+    listen __PORT__;
+    listen [::]:__PORT__;
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+    charset utf-8;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~* \.(?:css|js|png|jpe?g|gif|ico|svg|woff2?)$ {
+        expires 1h;
+        add_header Cache-Control "public";
+    }
+}

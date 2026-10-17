@@ -6,6 +6,17 @@ App independiente del panel dealer. Simula el catálogo regional para carros y m
 
 Sirve esta carpeta con cualquier servidor estático o abre `index.html`. No requiere instalación ni API. Se recomienda servirla en `localhost` para disponer de IndexedDB y guardar archivos. Fotos de muestra y la fuente Inter se cargan desde Unsplash y Google Fonts.
 
+## Docker y Railway
+
+La imagen sirve los archivos estáticos con Nginx y escucha el puerto definido en `PORT` (usa `8080` por defecto).
+
+```bash
+docker build -t dealerly-market .
+docker run --rm -p 8080:8080 -e PORT=8080 dealerly-market
+```
+
+Railway detecta `Dockerfile` en la raíz del repositorio. Usa `market-dealerly` como repositorio del servicio y genera un dominio público desde **Settings → Networking**.
+
 ## Recorridos
 
 - Explorar anuncios públicos, filtrar por ubicación, precio, año y tipo de vendedor, ordenar y paginar resultados; abrir fichas, guardar favoritos y pedir contacto o visita.
